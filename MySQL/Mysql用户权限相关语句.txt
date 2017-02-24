@@ -1,0 +1,18 @@
+创建只读用户：
+GRANT SELECT ON *.* TO 'chen'@'localhost' IDENTIFIED BY '123456';
+
+创建只写用户：
+GRANT INSERT,UPDATE,DELETE ON *.* TO 'chen'@'localhost' IDENTIFIED BY '123456';
+
+创建全部权限的用户：
+GRANT ALL ON *.* TO 'root'@'localhost' IDENTIFIED BY '123456';
+
+如何查看用户权限：
+SHOW GRANTS FOR chen@'localhost';
+
+如何取消用户权限：
+REVOKE SELECT ON *.* FROM 'chen'@'localhost';
+
+如何删除用户：
+USE MYSQL;
+DELETE FROM USER WHERE USER = "chen" AND HOST = "localhost";
